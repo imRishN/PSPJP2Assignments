@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.Period;
 import java.util.*;
 
+import date.DateUtil;
 import nlp.NLPMap;
 import session.Session;
 
@@ -110,7 +111,7 @@ public class DateTimeCalculatorMenu {
 		int n = scanner.nextInt();
 		
 		NLPMap nlpMap = new NLPMap();
-		nlpMap.NLPConverter(d, n);
+		System.out.println(DateUtil.localDateToString(nlpMap.NLPConverter(d, n)));
 	}
 
 }
