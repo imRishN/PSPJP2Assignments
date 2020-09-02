@@ -1,0 +1,32 @@
+#container1{
+    width:90%;
+    background-color: lightblue;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#outsideContainer{
+    width:90%;
+    background-color: #fcebe1;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+ 
+input[name=date1], input[name=date2], select[name=ntype], input[name=nday], input[type=submit], input[name=phrase]{ 
+    height: 40px;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+ input[type=submit]{ 
+    background-color: darkblue;
+    color: white;
+}
+
+
+#container1>a{
+    margin-left: 30px;
+}  

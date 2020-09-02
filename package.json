@@ -1,0 +1,24 @@
+{
+  "name": "pspjp2assignments",
+  "version": "1.0.0",
+  "description": "Node Js Service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imRishN/PSPJP2Assignments.git"
+  },
+  "author": "Rishab Nahata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imRishN/PSPJP2Assignments/issues"
+  },
+  "homepage": "https://github.com/imRishN/PSPJP2Assignments#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "multer": "^1.4.2"
+  }
+}

@@ -1,0 +1,15 @@
+package controllers;
+
+import java.util.List;
+
+import models.Transaction;
+
+public class FeeCalculator {
+	public static final String fileLocation = "G:\\Publicis Sapient FTE\\PJP 2\\Week2\\Sample_Data_Fee_Calculator.csv";
+	private List<Transaction> transactions;
+	
+	public void readData()
+	{
+		transactions = TransactionDataReader.readCSV(fileLocation);
+	}
+}

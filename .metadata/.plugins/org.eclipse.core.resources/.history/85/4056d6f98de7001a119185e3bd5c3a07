@@ -1,0 +1,8 @@
+import controllers.TransactionDataReader;
+
+public class FeeCalculatorRunner {
+
+	public static void main(String args[]) {
+		TransactionDataReader.readCSV();
+	}
+}

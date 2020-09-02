@@ -1,0 +1,91 @@
+package nlp;
+
+public class NLPMap {
+	public Calendar NLPToDate(String phrase, int n) {
+		Date date = Calendar.getInstance().getTime();
+		final DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+		String strDate = dateFormat.format(date); // current date
+
+		d1.setDate(strDate);
+		Calendar res = Calendar.getInstance();
+		phrase = phrase.toLowerCase();
+
+		HashMap<String, NLP> ht = new HashMap<String, NLP>();
+
+		ht.put("today", (p, x) -> {
+		});
+		ht.put("tomorrow", (p, x) -> {
+			res.add(Calendar.DAY_OF_MONTH, 1);
+		});
+		ht.put("yesterday", (p, x) -> {
+			res.add(Calendar.DAY_OF_MONTH, -1);
+		});
+		ht.put("day after tomorrow", (p, x) -> {
+			res.add(Calendar.DAY_OF_MONTH, 2);
+		});
+		ht.put("day before yesterday", (p, x) -> {
+			res.add(Calendar.DAY_OF_MONTH, -2);
+		});
+		ht.put("next week", (p, x) -> {
+			res.add(Calendar.WEEK_OF_YEAR, 1);
+		});
+		ht.put("last week", (p, x) -> {
+			res.add(Calendar.WEEK_OF_YEAR, -1);
+		});
+		ht.put("previous week", (p, x) -> {
+			res.add(Calendar.WEEK_OF_YEAR, -1);
+		});
+		ht.put("next month", (p, x) -> {
+			res.add(Calendar.MONTH, 1);
+		});
+		ht.put("last month", (p, x) -> {
+			res.add(Calendar.MONTH, -1);
+		});
+		ht.put("months after", (p, x) -> {
+			res.add(Calendar.MONTH, n);
+		});
+		ht.put("months before", (p, x) -> {
+			res.add(Calendar.MONTH, -n);
+		});
+		ht.put("next year", (p, x) -> {
+			res.add(Calendar.YEAR, 1);
+		});
+		ht.put("last year", (p, x) -> {
+			res.add(Calendar.YEAR, -1);
+		});
+		ht.put("days from now", (p, x) -> {
+			res.add(Calendar.DAY_OF_MONTH, n);
+		});
+		ht.put("weeks from now", (p, x) -> {
+			res.add(Calendar.WEEK_OF_MONTH, n);
+		});
+		ht.put("months from now", (p, x) -> {
+			res.add(Calendar.MONTH, n);
+		});
+		ht.put("years from now", (p, x) -> {
+			res.add(Calendar.YEAR, n);
+		});
+		ht.put("days earlier", (p, x) -> {
+			res.add(Calendar.DAY_OF_MONTH, -n);
+		});
+		ht.put("weeks earlier", (p, x) -> {
+			res.add(Calendar.WEEK_OF_MONTH, -n);
+		});
+		ht.put("months earlier", (p, x) -> {
+			res.add(Calendar.MONTH, -n);
+		});
+		ht.put("years earlier", (p, x) -> {
+			res.add(Calendar.YEAR, -n);
+		});
+
+		NLP nlpconverter = null;
+		if (ht.containsKey(phrase)) {
+			nlpconverter = ht.get(phrase);
+			nlpconverter.convertToDate(phrase, n);
+		} else {
+			throw new NoSuchElementException("Enter a valid natural language phrase");
+		}
+		return res;
+	}
+
+}

@@ -1,0 +1,96 @@
+package nlp;
+
+
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.NoSuchElementException;
+
+import com.sapient.DateTimeCalculator.DateTimeCalculator;
+
+import date.DateUtil;
+
+public class NLPMap {
+	public String NLPToDate(String dateString, int n) {
+		
+		String todayString = DateUtil.localDateToString(LocalDate.now());
+		DateTimeCalculator dateTimeCalculator = new DateTimeCalculator();
+		HashMap<String, NLP> map = new HashMap<String, NLP>();
+
+		map.put("today", (today, x) -> {});
+		map.put("tomorrow", (today, x) -> {
+			dateTimeCalculator.addNDays(todayString, 1);
+		});
+		final String convertedDate = "";
+		
+		map.put("yesterday", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNDays(todayString, 1);
+		});
+		map.put("day after tomorrow", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNDays(todayString, 2);
+		});
+		map.put("day before yesterday", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNDays(todayString, 2);
+		});
+		map.put("next week", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNWeeks(todayString, 1);
+		});
+		map.put("last week", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNWeeks(todayString, 1);
+		});
+		map.put("previous week", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNWeeks(todayString, 1);
+		});
+		map.put("next month", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNMonths(todayString, 1);
+		});
+		map.put("last month", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNMonths(todayString, 1);
+		});
+		map.put("months after", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNMonths(todayString, n);
+		});
+		map.put("months before", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNMonths(todayString, n);
+		});
+		map.put("next year", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNYears(todayString, 1);
+		});
+		map.put("last year", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNYears(todayString, 1);
+		});
+		map.put("days from now", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNDays(todayString, n);
+		});
+		map.put("weeks from now", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNWeeks(todayString, n);
+		});
+		map.put("months from now", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNMonths(todayString, n);
+		});
+		map.put("years from now", (today, x) -> {
+			convertedDate = dateTimeCalculator.addNYears(todayString, n);
+		});
+		map.put("yesterday", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNDays(todayString, n);
+		});
+		map.put("weeks earlier", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNWeeks(todayString, n);
+		});
+		map.put("months earlier", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNMonths(todayString, n);
+		});
+		map.put("years earlier", (today, x) -> {
+			convertedDate = dateTimeCalculator.subtractNYears(todayString, n);
+		});
+
+		NLP nlp = null;
+		if (map.containsKey(dateString)) {
+			nlp = map.get(dateString);
+			nlp.convert(dateString, n);
+		} else {
+			throw new NoSuchElementException("Invalid language");
+		}
+		return convertedDate;
+	}
+
+}

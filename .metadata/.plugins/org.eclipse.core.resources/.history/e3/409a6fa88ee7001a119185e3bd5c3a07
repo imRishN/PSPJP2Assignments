@@ -1,0 +1,10 @@
+import controllers.TransactionDataReader;
+
+public class FeeCalculatorRunner {
+
+	public static final String fileLocation = "G:\\Publicis Sapient FTE\\PJP 2\\Week2\\Sample_Data_Fee_Calculator.csv";
+	
+	public static void main(String args[]) {
+		TransactionDataReader.readCSV(fileLocation);
+	}
+}

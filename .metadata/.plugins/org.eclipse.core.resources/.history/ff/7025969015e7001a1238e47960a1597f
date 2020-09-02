@@ -1,0 +1,110 @@
+package nlp;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.BiFunction;
+
+import com.sapient.DateTimeCalculator.DateTimeCalculator;
+
+import java.time.LocalDate;
+
+public class NLPMap {
+	
+	DateTimeCalculator dateTimeCalculator = new DateTimeCalculator();
+	
+	HashMap<String, NLP> ht = new HashMap<String, NLP>();
+
+	ht.put("today", (p, x) -> {
+	});
+//	ht.put("tomorrow", (p, x) -> {
+//		res.add(Calendar.DAY_OF_MONTH, 1);
+//	});
+//	ht.put("yesterday", (p, x) -> {
+//		res.add(Calendar.DAY_OF_MONTH, -1);
+//	});
+//	ht.put("day after tomorrow", (p, x) -> {
+//		res.add(Calendar.DAY_OF_MONTH, 2);
+//	});
+//	ht.put("day before yesterday", (p, x) -> {
+//		res.add(Calendar.DAY_OF_MONTH, -2);
+//	});
+//	ht.put("next week", (p, x) -> {
+//		res.add(Calendar.WEEK_OF_YEAR, 1);
+//	});
+//	ht.put("last week", (p, x) -> {
+//		res.add(Calendar.WEEK_OF_YEAR, -1);
+//	});
+//	ht.put("previous week", (p, x) -> {
+//		res.add(Calendar.WEEK_OF_YEAR, -1);
+//	});
+//	ht.put("next month", (p, x) -> {
+//		res.add(Calendar.MONTH, 1);
+//	});
+//	ht.put("last month", (p, x) -> {
+//		res.add(Calendar.MONTH, -1);
+//	});
+//	ht.put("months after", (p, x) -> {
+//		res.add(Calendar.MONTH, n);
+//	});
+//	ht.put("months before", (p, x) -> {
+//		res.add(Calendar.MONTH, -n);
+//	});
+//	ht.put("next year", (p, x) -> {
+//		res.add(Calendar.YEAR, 1);
+//	});
+//	ht.put("last year", (p, x) -> {
+//		res.add(Calendar.YEAR, -1);
+//	});
+//	ht.put("days from now", (p, x) -> {
+//		res.add(Calendar.DAY_OF_MONTH, n);
+//	});
+//	ht.put("weeks from now", (p, x) -> {
+//		res.add(Calendar.WEEK_OF_MONTH, n);
+//	});
+//	ht.put("months from now", (p, x) -> {
+//		res.add(Calendar.MONTH, n);
+//	});
+//	ht.put("years from now", (p, x) -> {
+//		res.add(Calendar.YEAR, n);
+//	});
+//	ht.put("days earlier", (p, x) -> {
+//		res.add(Calendar.DAY_OF_MONTH, -n);
+//	});
+//	ht.put("weeks earlier", (p, x) -> {
+//		res.add(Calendar.WEEK_OF_MONTH, -n);
+//	});
+//	ht.put("months earlier", (p, x) -> {
+//		res.add(Calendar.MONTH, -n);
+//	});
+//	ht.put("years earlier", (p, x) -> {
+//		res.add(Calendar.YEAR, -n);
+//	});
+
+	NLP nlpconverter = null;
+	
+//    Map<String, BiFunction<LocalDate, Integer, String>> commands = Map.ofEntries(
+    		
+//            Map.entry("today", (String date, Integer n) -> date),
+//            Map.entry("tomorrow", (String date, Integer n) ->),
+//            Map.entry("yesterday", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusDays(1))),
+//            Map.entry("day after tomorrow", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusDays(2))),
+//            Map.entry("day before yesterday", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusDays(2))),
+//            Map.entry("last week", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusWeeks(1))),
+//            Map.entry("previous week", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusWeeks(1))),
+//            Map.entry("last month", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusMonths(1))),
+//            Map.entry("last year", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusYears(1))),
+//            Map.entry("month after", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusMonths(1))),
+//            Map.entry("next month", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusMonths(1))),
+//            Map.entry("next week", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusWeeks(1))),
+//            Map.entry("next year", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusYears(1))),
+//            Map.entry("month before", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusMonths(1))),
+//            Map.entry("weeks from now", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusWeeks(n))),
+//            Map.entry("days from now", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusDays(n))),
+//            Map.entry("months from now", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusMonths(n))),
+//            Map.entry("years from now", (LocalDate date, Integer n) -> DateUtil.parseDate(date.plusYears(n))),
+//            Map.entry("weeks earlier", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusWeeks(n))),
+//            Map.entry("days earlier", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusDays(n))),
+//            Map.entry("months earlier", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusMonths(n))),
+//            Map.entry("years earlier", (LocalDate date, Integer n) -> DateUtil.parseDate(date.minusYears(n)))
+    );
+}

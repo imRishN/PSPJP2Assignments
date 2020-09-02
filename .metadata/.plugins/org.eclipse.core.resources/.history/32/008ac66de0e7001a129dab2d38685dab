@@ -1,0 +1,18 @@
+package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.AverageIncome;
+import reader.Excel;
+
+public class DataReader {
+	
+	public static List<AverageIncome> readXLSX(String fileLocation)
+	{
+		String[][] data = Excel.get(fileLocation);
+		List<AverageIncome> incomeData = new ArrayList<AverageIncome>();
+		
+		return incomeData;
+	}
+}

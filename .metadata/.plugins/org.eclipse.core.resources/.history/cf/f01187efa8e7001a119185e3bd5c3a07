@@ -1,0 +1,9 @@
+import controllers.FeeCalculator;
+
+public class FeeCalculatorRunner {
+	
+	public static void main(String args[]) {
+		FeeCalculator feeCalculator = new FeeCalculator();
+		feeCalculator.readData();
+	}
+}

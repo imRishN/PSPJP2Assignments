@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Date Time Calculator</title>
+</head>
+<body>
+	<div class="container" id="outsideContainer"> 
+		<h1 style="margin: 25px">Welcome to Date Time Calculator</h1>
+		<hr/>
+		<form action="/calculate">
+			<div class="form-group" style="margin: 25px">
+				<label for="operations">Select your choice</label>
+				<select class="form-control" aria-selected="0" name="opsChoice" id="opsChoice">
+					<option value="0">Select</option>
+					<option value="1">Addition/Subtraction of two dates</option>
+					<option value="2">Addition/Subtraction of n days/weeks/months to a given date</option>
+					<option value="3">Determine day of the week of a given date</option>
+					<option value="4">Determine week number of a given date</option>
+					<option value="5">Translate natural language phrases</option>
+				</select>
+			</div>
+
+			<div class="operation" id="container1">
+				<h6 class="display-4" style="padding-bottom: 25px">Enter Details</h5>
+
+					<div>
+						<div class="row">
+							<div class="col-sm-6">
+								<input type="date" class="form-control" name="date1" placeholder="Enter First Date" required><br>
+							</div>
+							<div class="col-sm-6">	
+								<input type="date" class="form-control" name="date2" placeholder="Enter Second Date"><br>
+							</div>
+							<div class="col-sm-6">	
+								<input type="number" class="form-control" name="n" id="n" placeholder="Enter Number">
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<select class="form-control" id="ntype" name="ntype">
+										<option value="0">Select Target Operation on Number</option>
+										<option value="1">Day</option>
+										<option value="2">Week</option>
+										<option value="3">Month</option>
+										<option value="4">Year</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="radio" style="margin-left: 10px">
+							<h6 align="left">&nbsp 
+								<input class="form-check-input" type="radio" name="addsub" value="1"> Add &nbsp &nbsp &nbsp
+								<input class="form-check-input" type="radio" name="addsub" value="2"> Subtract
+							</h6>
+						</div>
+						<hr/>
+						<div class="form-group" id="phrase" style="margin-top: 25px">
+							<input type="text" class="form-control" name="phrase" id="phrase" placeholder="Enter Phrase">
+						</div>
+
+					</div>
+
+					<input type="submit" name="submit" class="btn btn-primary" value="Submit"><br>
+				</div>
+			</div> 
+		</form>
+	</div>  
+</body>
+</html>
