@@ -1,5 +1,0 @@
-1598435789163	Rename package 'model'
-1598439532923	Rename type 'ReadTransactions'
-1598439843780	Move compilation unit
-1598450085814	Encapsulate field 'transactionFees'
-1598452331920	Rename type 'SessionReportGenerator'

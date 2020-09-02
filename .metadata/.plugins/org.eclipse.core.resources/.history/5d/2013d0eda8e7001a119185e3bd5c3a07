@@ -1,9 +1,0 @@
-package controllers;
-
-import java.util.List;
-
-import models.Transaction;
-
-public class SessionReportGenerator {
-	List<Transaction> transactions;
-}

@@ -1,5 +1,0 @@
-package nlp;
-
-public interface NLP {
-	public void convertToDate(String today, int n) ;
-}
