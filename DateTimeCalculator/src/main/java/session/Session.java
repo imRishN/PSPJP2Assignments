@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Session {
-	private static final String CURRENT = "sessions.txt";
+	private static final String CURRENT = "session.txt";
 	private static final String PERMANENT = "date_time_calculator.txt";
 	private BufferedWriter perm;
 	private BufferedWriter temp;

@@ -53,6 +53,7 @@ public class DateTimeCalculatorMenu {
 		default:
 			break;
 		}
+		session.closeFiles();
 	}
 
 	private static void getDateDifference() {
@@ -78,8 +79,8 @@ public class DateTimeCalculatorMenu {
 		
 		String futureDate = dateTimeCalculator.addNDays(d, n);
 		String pastDate = dateTimeCalculator.subtractNDays(d, n);
-		
-
+		session.write(d + "+" + n + "" + futureDate);
+		session.write(d + "-" + n + "" + pastDate);
 		System.out.println("Future Date is: " + futureDate);
 		System.out.println("Past Date is: " + pastDate);
 		
